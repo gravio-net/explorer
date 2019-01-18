@@ -1,0 +1,14 @@
+[Unit]
+Description=Gravio block explorer
+
+[Service]
+ExecStart=/home/szhelonkin/block_explorer/explorer/app.js
+Restart=always
+User=nobody
+Group=nobody
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/szhelonkin/block_explorer/explorer
+
+[Install]
+WantedBy=multi-user.target
